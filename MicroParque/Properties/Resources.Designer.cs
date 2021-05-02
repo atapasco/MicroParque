@@ -73,6 +73,26 @@ namespace MicroParque.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fotos1 {
+            get {
+                object obj = ResourceManager.GetObject("fotos1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LOGIN {
+            get {
+                object obj = ResourceManager.GetObject("LOGIN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -86,6 +106,16 @@ namespace MicroParque.Properties {
         internal static System.Drawing.Bitmap logo_blanco_y_negro {
             get {
                 object obj = ResourceManager.GetObject("logo blanco y negro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_encuestas {
+            get {
+                object obj = ResourceManager.GetObject("logo encuestas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
