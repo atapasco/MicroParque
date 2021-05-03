@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMainMenu.Designer.cs">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPal.Designer.cs">
+      <DependentUpon>FrmPal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMainMenu.resx">
+      <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPal.resx">
+      <DependentUpon>FrmPal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,6 +98,27 @@
       <Project>{6ca0e11b-632e-4276-88ed-ace64b6bbd7d}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\fotos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\logo blanco y negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\pagina pal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\logoEXAMEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\logo encuestas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\LOGIN.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
