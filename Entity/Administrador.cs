@@ -10,36 +10,30 @@ namespace Entity
     {
         public string Usuario { set; get; }
         public string Contraseña { set; get; }
-        public int Fila { set; get; }
         public Administrador()
         {
 
         }
 
-        public bool ValidacionDeUsuario (List<string> usuarios, string usuario)
+        public bool ValidacionDeUsuario (List<Administrador> usuarios, string usuario)
         {
-            foreach (string item in usuarios)
+            foreach (Administrador item in usuarios)
             {
-                this.Fila++;
-                if (usuario.Equals(item))
+                if (usuario.Equals(item.Usuario))
                 {
                     this.Usuario = usuario;
+                    this.Contraseña = item.Contraseña;
                     return true;
                 }
             }
             return false;
         }
 
-        public bool ValidacionDeContraseña(List<string> contraseñas, string contraseña)
+        public bool ValidacionDeContraseña(string contraseña)
         {
-            int i = 0;
-            foreach (string item in contraseñas)
+            if (contraseña.Equals(this.Contraseña))
             {
-                i++;
-                if (contraseña.Equals(item) && i==Fila)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         } 
