@@ -10,9 +10,10 @@ namespace Entity
     {
         public string Usuario { set; get; }
         public string Contraseña { set; get; }
+
+     
         public Administrador()
         {
-
         }
 
         public bool ValidacionDeUsuario (List<Administrador> usuarios, string usuario)
@@ -36,6 +37,64 @@ namespace Entity
                 return true;
             }
             return false;
-        } 
+        }
+
+        public void CrearCuenta(string usuario, string contraseña)
+        {
+            this.Usuario = usuario;
+            this.Contraseña = contraseña;
+        }
+
+        public bool ValidarUsuario(string usuario)
+        {
+            int largoDeCadena = 0;
+            char[] usuarioConvertidoEnCadena = {};
+
+            largoDeCadena = usuario.Length;
+            usuarioConvertidoEnCadena = usuario.ToCharArray();
+
+            for (int i = 0; i <= largoDeCadena; i++)
+            {
+                if ((usuarioConvertidoEnCadena[i] >= 48 && usuarioConvertidoEnCadena[i] <= 57) || (usuarioConvertidoEnCadena[i] >= 65 && usuarioConvertidoEnCadena[i] <= 90)
+                    || (usuarioConvertidoEnCadena[i] >= 97 && usuarioConvertidoEnCadena[i] <= 122))
+                {
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool ValidarContraseña(string contraseña)
+        {
+            int i = 0;
+            bool validarMayuscula = false;
+            bool validarMinuscula = false;
+            bool validarNumero = false;
+
+            for (i = 48; i <= 57; i++)
+            {
+                validarNumero = contraseña.Contains(Convert.ToChar(i));
+            }
+            for (i = 65; i <= 90; i++)
+            {
+                validarMayuscula = contraseña.Contains(Convert.ToChar(i));
+            }
+            for (i = 97; i <= 122; i++)
+            {
+                validarMinuscula = contraseña.Contains(Convert.ToChar(i));
+            }
+
+            if(validarMayuscula == true && validarMinuscula == true && validarNumero == true && contraseña.Length >= 8)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
