@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Mail;
 
 namespace Entity
 {
@@ -10,6 +12,8 @@ namespace Entity
     {
         public string Usuario { set; get; }
         public string Contraseña { set; get; }
+        public string Correo { set; get; }
+        public List<DateTime> FechaDeIngreso{ set; get; }
 
      
         public Administrador()
@@ -39,10 +43,11 @@ namespace Entity
             return false;
         }
 
-        public void CrearCuenta(string usuario, string contraseña)
+        public void CrearCuenta(string usuario, string contraseña, string correo)
         {
             this.Usuario = usuario;
             this.Contraseña = contraseña;
+            this.Correo = correo;
         }
 
         public bool ValidarUsuario(string usuario)
@@ -53,7 +58,7 @@ namespace Entity
             largoDeCadena = usuario.Length;
             usuarioConvertidoEnCadena = usuario.ToCharArray();
 
-            for (int i = 0; i <= largoDeCadena; i++)
+            for (int i = 0; i <= largoDeCadena - 1; i++)
             {
                 if ((usuarioConvertidoEnCadena[i] >= 48 && usuarioConvertidoEnCadena[i] <= 57) || (usuarioConvertidoEnCadena[i] >= 65 && usuarioConvertidoEnCadena[i] <= 90)
                     || (usuarioConvertidoEnCadena[i] >= 97 && usuarioConvertidoEnCadena[i] <= 122))
@@ -95,6 +100,38 @@ namespace Entity
             {
                 return false;
             }
+        }
+
+        public string EnvioDeCorreo()
+        {
+            string mensaje = null;
+            string correoDelMicroParque = "atapasco@unicesar.edu.co";
+            string NombreDelCorreo = "MicroParque";
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(correoDelMicroParque, NombreDelCorreo);
+                mail.To.Add(this.Correo);
+
+                mail.Subject = "INTENTO DE INGRESO";
+                mail.Body = $"Usuario {this.Usuario} Alguien esta intentando entrar a tu cuenta";
+                mail.IsBodyHtml = false;
+
+
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Aquí debes sustituir tu servidor SMTP y el puerto
+                client.Credentials = new NetworkCredential(correoDelMicroParque, "lossauces123");
+                client.EnableSsl = true;//En caso de que tu servidor de correo no utilice cifrado SSL,poner en false
+
+
+                client.Send(mail);
+                mensaje = "se ha enviado un correo por exceder los 10 intentos";
+
+            }
+            catch (Exception ex)
+            {
+            }
+
+            return mensaje;
         }
     }
 }
