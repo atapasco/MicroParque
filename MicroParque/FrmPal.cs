@@ -16,14 +16,16 @@ namespace MicroParque
         public Frm_Main()
         {
             InitializeComponent();
+            
         }
 
         private void panelMain_Load(object sender, EventArgs e)
         {
             openFormChild(new FrmPal());
+            
         }
 
-        private void openFormChild(object formChild)
+        public void openFormChild(object formChild)
         {
             if (this.panelMenu.Controls.Count > 0)
             {
