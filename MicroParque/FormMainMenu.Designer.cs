@@ -69,7 +69,7 @@ namespace MicroParque
             this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.Teal;
-            this.buttonLogin.Location = new System.Drawing.Point(879, 31);
+            this.buttonLogin.Location = new System.Drawing.Point(862, 31);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(101, 37);
             this.buttonLogin.TabIndex = 4;

@@ -29,6 +29,11 @@ namespace Entity
             this.Correo = correo;
         }
 
+        public Restaurante()
+        {
+
+        }
+
         public void ConteoCantidadDeEmpleados()
         {
             this.CantidadDeEmpleados++;

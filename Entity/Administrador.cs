@@ -127,7 +127,7 @@ namespace Entity
                 mensaje = "se ha enviado un correo por exceder los 10 intentos";
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
 
