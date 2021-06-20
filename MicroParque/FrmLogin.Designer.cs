@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(360, 76);
+            this.panel1.Location = new System.Drawing.Point(369, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(316, 405);
             this.panel1.TabIndex = 0;
@@ -127,7 +127,7 @@
             this.PanelChildLog.AutoScroll = true;
             this.PanelChildLog.Location = new System.Drawing.Point(-1, 0);
             this.PanelChildLog.Name = "PanelChildLog";
-            this.PanelChildLog.Size = new System.Drawing.Size(1035, 555);
+            this.PanelChildLog.Size = new System.Drawing.Size(1052, 554);
             this.PanelChildLog.TabIndex = 1;
             // 
             // FrmLogin
@@ -135,7 +135,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::MicroParque.Properties.Resources.Fondo_login;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1034, 553);
+            this.ClientSize = new System.Drawing.Size(1052, 554);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelChildLog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

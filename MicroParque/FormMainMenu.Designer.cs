@@ -79,7 +79,7 @@ namespace MicroParque
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelChild.Location = new System.Drawing.Point(1, -3);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1051, 554);
+            this.PanelChild.Size = new System.Drawing.Size(1052, 554);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
