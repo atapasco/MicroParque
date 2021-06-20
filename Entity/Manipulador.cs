@@ -17,11 +17,12 @@ namespace Entity
         public string hojaDeVida { set; get; }
         public string correo { set; get; }
 
-        private Restaurante restaurante;
+        public Restaurante restaurante = new Restaurante();
 
         public Manipulador(string identificacion, string primerNombre, string segundoNombre,
                            string primerApellido, string segundoApellido, string telefono,
                            string hojaDeVida, string correo){
+
             this.Identificacion = identificacion;
             this.PrimerNombre = primerNombre;
             this.SegundoNombre = segundoNombre;
