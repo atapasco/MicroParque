@@ -94,7 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1028, 555);
+            this.ClientSize = new System.Drawing.Size(1045, 555);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
