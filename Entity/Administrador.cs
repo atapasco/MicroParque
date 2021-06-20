@@ -20,7 +20,7 @@ namespace Entity
         {
         }
 
-        public bool ValidacionDeUsuario (List<Administrador> usuarios, string usuario)
+        public bool ComprobacionDeExistenciaDeUsuario (List<Administrador> usuarios, string usuario)
         {
             foreach (Administrador item in usuarios)
             {
@@ -34,7 +34,7 @@ namespace Entity
             return false;
         }
 
-        public bool ValidacionDeContraseña(string contraseña)
+        public bool CompararContraseñaExistente (string contraseña)
         {
             if (contraseña.Equals(this.Contraseña))
             {
@@ -50,7 +50,7 @@ namespace Entity
             this.Correo = correo;
         }
 
-        public bool ValidarUsuario(string usuario)
+        public bool ValidarCreacionDeUsuario(string usuario)
         {
             int largoDeCadena = 0;
             char[] usuarioConvertidoEnCadena = {};
@@ -72,7 +72,7 @@ namespace Entity
             return true;
         }
 
-        public bool ValidarContraseña(string contraseña)
+        public bool ValidarCreacionDeContraseña(string contraseña)
         {
             int i = 0;
             bool validarMayuscula = false;
