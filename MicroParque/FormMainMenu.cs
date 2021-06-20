@@ -17,6 +17,7 @@ namespace MicroParque
         {
             InitializeComponent();
             formulario = new Form();
+            BtnBack.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -45,6 +46,7 @@ namespace MicroParque
             BtnLogin.Hide();
             PbTallres.Hide();
             PbEncuestas.Hide();
+            BtnBack.Show();
         }
 
         private void MostrarMenu()
@@ -53,6 +55,7 @@ namespace MicroParque
             BtnLogin.Show();
             PbTallres.Show();
             PbEncuestas.Show();
+            BtnBack.Hide();
         }
 
         public void openFormChild(object formChild)
@@ -68,6 +71,12 @@ namespace MicroParque
             this.PanelChild.Controls.Add(child);
             this.PanelChild.Tag = child;
             child.Show();
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.PanelChild.Controls.RemoveAt(0);
+            MostrarMenu();
         }
     }
 }

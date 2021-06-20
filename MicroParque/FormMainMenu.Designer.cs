@@ -34,6 +34,7 @@ namespace MicroParque
             this.PbHome = new System.Windows.Forms.PictureBox();
             this.PanelChild = new System.Windows.Forms.Panel();
             this.BtnLogin = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PbEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTallres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHome)).BeginInit();
@@ -78,18 +79,38 @@ namespace MicroParque
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelChild.Location = new System.Drawing.Point(1, -3);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1034, 553);
+            this.PanelChild.Size = new System.Drawing.Size(1057, 553);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
             // 
-            this.BtnLogin.Location = new System.Drawing.Point(810, 44);
+            this.BtnLogin.BackColor = System.Drawing.Color.Teal;
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnLogin.ForeColor = System.Drawing.Color.Linen;
+            this.BtnLogin.Location = new System.Drawing.Point(857, 44);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(164, 47);
+            this.BtnLogin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnLogin.Size = new System.Drawing.Size(117, 36);
             this.BtnLogin.TabIndex = 8;
-            this.BtnLogin.Text = "BtnLogin";
-            this.BtnLogin.UseVisualStyleBackColor = true;
+            this.BtnLogin.Text = "Login";
+            this.BtnLogin.UseVisualStyleBackColor = false;
             this.BtnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.BackColor = System.Drawing.Color.Teal;
+            this.BtnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBack.ForeColor = System.Drawing.Color.Linen;
+            this.BtnBack.Location = new System.Drawing.Point(59, 46);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.BtnBack.Size = new System.Drawing.Size(117, 36);
+            this.BtnBack.TabIndex = 9;
+            this.BtnBack.Text = "Back";
+            this.BtnBack.UseVisualStyleBackColor = false;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // FrmPal
             // 
@@ -98,6 +119,7 @@ namespace MicroParque
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(24)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1053, 550);
+            this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.PbEncuestas);
             this.Controls.Add(this.PbTallres);
@@ -122,6 +144,7 @@ namespace MicroParque
         private System.Windows.Forms.PictureBox PbEncuestas;
         private System.Windows.Forms.Panel PanelChild;
         private System.Windows.Forms.Button BtnLogin;
+        private System.Windows.Forms.Button BtnBack;
     }
 }
 
