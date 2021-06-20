@@ -21,13 +21,9 @@ namespace MicroParque
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
-            
             EsconderLog();
             PanelChildLog.Show();
             openFormChild(new Frm_Main());
-
         }
 
 

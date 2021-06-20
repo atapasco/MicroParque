@@ -79,7 +79,7 @@ namespace MicroParque
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelChild.Location = new System.Drawing.Point(1, -3);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1052, 554);
+            this.PanelChild.Size = new System.Drawing.Size(1036, 1053);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
@@ -130,6 +130,7 @@ namespace MicroParque
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "FrmPal";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmPal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PbEncuestas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTallres)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHome)).EndInit();
@@ -142,9 +143,9 @@ namespace MicroParque
         private System.Windows.Forms.PictureBox PbHome;
         private System.Windows.Forms.PictureBox PbTallres;
         private System.Windows.Forms.PictureBox PbEncuestas;
-        private System.Windows.Forms.Panel PanelChild;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnBack;
+        private System.Windows.Forms.Panel PanelChild;
     }
 }
 

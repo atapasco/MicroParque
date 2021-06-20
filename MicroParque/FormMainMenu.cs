@@ -26,18 +26,18 @@ namespace MicroParque
         }
 
 
-  /*  private void AbrirFrm()
-        {
-            Frm_Main pal = new Frm_Main();
-            FrmLogin login = new FrmLogin();
-            pal.openFormChild(login);
-        }
- */
+        /*  private void AbrirFrm()
+              {
+                  Frm_Main pal = new Frm_Main();
+                  FrmLogin login = new FrmLogin();
+                  pal.openFormChild(login);
+              }
+       */
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+
             EsconderMenu();
             openFormChild(new FrmLogin());
-            
         }
 
         private void EsconderMenu()
@@ -70,6 +70,7 @@ namespace MicroParque
             child.Dock = DockStyle.Fill;
             this.PanelChild.Controls.Add(child);
             this.PanelChild.Tag = child;
+            this.PanelChild.Size = new System.Drawing.Size(1053, 555);
             child.Show();
         }
 
@@ -77,6 +78,11 @@ namespace MicroParque
         {
             this.PanelChild.Controls.RemoveAt(0);
             MostrarMenu();
+        }
+
+        private void FrmPal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
