@@ -114,7 +114,7 @@ namespace Entity
                 mail.To.Add(this.Correo);
 
                 mail.Subject = "INTENTO DE INGRESO";
-                mail.Body = $"Usuario {this.Usuario} Alguien esta intentando entrar a tu cuenta";
+                mail.Body = $"Usuario {this.Usuario} Alguien esta intentando entrar a tu cuenta, direeccion ip: {SacarIp()}";
                 mail.IsBodyHtml = false;
 
 
@@ -133,6 +133,22 @@ namespace Entity
             }
 
             return mensaje;
+        }
+
+        static string SacarIp()
+        {
+            IPHostEntry host;
+            string localIP = "";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localIP = ip.ToString();
+                }
+            }
+
+            return localIP;
         }
     }
 }
