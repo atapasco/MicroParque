@@ -71,6 +71,7 @@ namespace MicroParque
             this.PbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbHome.TabIndex = 0;
             this.PbHome.TabStop = false;
+            this.PbHome.Click += new System.EventHandler(this.PbHome_Click);
             // 
             // PanelChild
             // 
@@ -79,7 +80,7 @@ namespace MicroParque
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelChild.Location = new System.Drawing.Point(1, -3);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1036, 1053);
+            this.PanelChild.Size = new System.Drawing.Size(1019, 1551);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin

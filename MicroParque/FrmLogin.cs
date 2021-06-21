@@ -20,12 +20,19 @@ namespace MicroParque
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        { 
             EsconderLog();
             PanelChildLog.Show();
             openFormChild(new Frm_Main());
         }
 
+        public void ValidarCierreSesion()
+        {
+            if (this.PanelChildLog.Controls.Count == 0)
+            {
+                MostrarLog();
+            }
+        }
 
         private void MostrarLog()
         {

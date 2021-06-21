@@ -84,5 +84,10 @@ namespace MicroParque
         {
 
         }
+
+        private void PbHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

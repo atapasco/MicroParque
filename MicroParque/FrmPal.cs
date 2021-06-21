@@ -16,7 +16,7 @@ namespace MicroParque
         public Frm_Main()
         {
             InitializeComponent();
-            
+            timer1.Start();
         }
 
         private void panelMain_Load(object sender, EventArgs e)
@@ -25,6 +25,25 @@ namespace MicroParque
             
         }
 
+        private void Frm_Main_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            //20 minutos
+            timer1.Interval = 5000;
+            timer1.Start();
+        }
 
+        private void Frm_Main_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            timer1.Stop();
+            //20 minutos
+            timer1.Interval = 1200000;
+            timer1.Start();   
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
