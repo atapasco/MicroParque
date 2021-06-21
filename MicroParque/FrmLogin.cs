@@ -22,16 +22,8 @@ namespace MicroParque
         private void button1_Click(object sender, EventArgs e)
         { 
             EsconderLog();
-            PanelChildLog.Show();
             openFormChild(new Frm_Main());
-        }
-
-        public void ValidarCierreSesion()
-        {
-            if (this.PanelChildLog.Controls.Count == 0)
-            {
-                MostrarLog();
-            }
+            timer1.Start();
         }
 
         private void MostrarLog()
@@ -41,6 +33,7 @@ namespace MicroParque
             textBox1.Show();
             textBox2.Show();
             pictureBox1.Show();
+            PanelChildLog.Hide();
         }
 
         private void EsconderLog()
@@ -50,6 +43,7 @@ namespace MicroParque
             textBox1.Hide();
             textBox2.Hide();
             pictureBox1.Hide();
+            PanelChildLog.Show();
         }
 
         public void openFormChild(object formChild)
@@ -67,5 +61,18 @@ namespace MicroParque
             child.Show();
         }
 
+        private void PanelChildLog_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            
+            if (this.PanelChildLog.Controls.Count == 0)
+            {
+                MostrarLog(); 
+            }
+        }
     }
 }

@@ -35,7 +35,6 @@ namespace MicroParque
        */
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-
             EsconderMenu();
             openFormChild(new FrmLogin());
         }

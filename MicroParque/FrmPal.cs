@@ -21,15 +21,13 @@ namespace MicroParque
 
         private void panelMain_Load(object sender, EventArgs e)
         {
-           
-            
         }
 
         private void Frm_Main_Click(object sender, EventArgs e)
         {
             timer1.Stop();
             //20 minutos
-            timer1.Interval = 5000;
+            timer1.Interval = 1200000;
             timer1.Start();
         }
 
@@ -43,7 +41,7 @@ namespace MicroParque
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

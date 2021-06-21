@@ -75,12 +75,10 @@ namespace MicroParque
             // 
             // PanelChild
             // 
-            this.PanelChild.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelChild.Location = new System.Drawing.Point(1, -3);
+            this.PanelChild.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelChild.Location = new System.Drawing.Point(0, 0);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1019, 1551);
+            this.PanelChild.Size = new System.Drawing.Size(1036, 1048);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
@@ -115,8 +113,7 @@ namespace MicroParque
             // 
             // FrmPal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 36F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(24)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1053, 550);
