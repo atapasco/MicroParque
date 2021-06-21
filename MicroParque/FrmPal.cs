@@ -43,6 +43,7 @@ namespace MicroParque
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            this.Close();
             
         }
     }
