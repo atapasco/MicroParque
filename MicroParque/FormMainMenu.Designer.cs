@@ -29,56 +29,23 @@ namespace MicroParque
         /// </summary>
         private void InitializeComponent()
         {
-            this.PbEncuestas = new System.Windows.Forms.PictureBox();
-            this.PbTallres = new System.Windows.Forms.PictureBox();
-            this.PbHome = new System.Windows.Forms.PictureBox();
             this.PanelChild = new System.Windows.Forms.Panel();
             this.BtnLogin = new System.Windows.Forms.Button();
             this.BtnBack = new System.Windows.Forms.Button();
+            this.PbEncuestas = new System.Windows.Forms.PictureBox();
+            this.PbTallres = new System.Windows.Forms.PictureBox();
+            this.PbHome = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PbEncuestas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbTallres)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbHome)).BeginInit();
             this.SuspendLayout();
-            // 
-            // PbEncuestas
-            // 
-            this.PbEncuestas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbEncuestas.Image = global::MicroParque.Properties.Resources.logo_encuestas;
-            this.PbEncuestas.Location = new System.Drawing.Point(553, 629);
-            this.PbEncuestas.Name = "PbEncuestas";
-            this.PbEncuestas.Size = new System.Drawing.Size(378, 419);
-            this.PbEncuestas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbEncuestas.TabIndex = 5;
-            this.PbEncuestas.TabStop = false;
-            // 
-            // PbTallres
-            // 
-            this.PbTallres.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PbTallres.Image = global::MicroParque.Properties.Resources.logo1;
-            this.PbTallres.Location = new System.Drawing.Point(100, 629);
-            this.PbTallres.Name = "PbTallres";
-            this.PbTallres.Size = new System.Drawing.Size(378, 419);
-            this.PbTallres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbTallres.TabIndex = 2;
-            this.PbTallres.TabStop = false;
-            // 
-            // PbHome
-            // 
-            this.PbHome.Image = global::MicroParque.Properties.Resources.fotos1;
-            this.PbHome.Location = new System.Drawing.Point(1, -3);
-            this.PbHome.Name = "PbHome";
-            this.PbHome.Size = new System.Drawing.Size(1035, 538);
-            this.PbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PbHome.TabIndex = 0;
-            this.PbHome.TabStop = false;
-            this.PbHome.Click += new System.EventHandler(this.PbHome_Click);
             // 
             // PanelChild
             // 
             this.PanelChild.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelChild.Location = new System.Drawing.Point(0, 0);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1036, 1048);
+            this.PanelChild.Size = new System.Drawing.Size(1036, 1108);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
@@ -111,10 +78,45 @@ namespace MicroParque
             this.BtnBack.UseVisualStyleBackColor = false;
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
+            // PbEncuestas
+            // 
+            this.PbEncuestas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbEncuestas.Image = global::MicroParque.Properties.Resources.logo_encuestas;
+            this.PbEncuestas.Location = new System.Drawing.Point(553, 629);
+            this.PbEncuestas.Name = "PbEncuestas";
+            this.PbEncuestas.Size = new System.Drawing.Size(378, 419);
+            this.PbEncuestas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbEncuestas.TabIndex = 5;
+            this.PbEncuestas.TabStop = false;
+            // 
+            // PbTallres
+            // 
+            this.PbTallres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PbTallres.Image = global::MicroParque.Properties.Resources.logo1;
+            this.PbTallres.Location = new System.Drawing.Point(100, 629);
+            this.PbTallres.Name = "PbTallres";
+            this.PbTallres.Size = new System.Drawing.Size(378, 419);
+            this.PbTallres.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbTallres.TabIndex = 2;
+            this.PbTallres.TabStop = false;
+            this.PbTallres.Click += new System.EventHandler(this.PbTallres_Click);
+            // 
+            // PbHome
+            // 
+            this.PbHome.Image = global::MicroParque.Properties.Resources.fotos1;
+            this.PbHome.Location = new System.Drawing.Point(1, -3);
+            this.PbHome.Name = "PbHome";
+            this.PbHome.Size = new System.Drawing.Size(1035, 538);
+            this.PbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbHome.TabIndex = 0;
+            this.PbHome.TabStop = false;
+            this.PbHome.Click += new System.EventHandler(this.PbHome_Click);
+            // 
             // FrmPal
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(24)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1053, 550);
             this.Controls.Add(this.BtnBack);
@@ -143,7 +145,7 @@ namespace MicroParque
         private System.Windows.Forms.PictureBox PbEncuestas;
         private System.Windows.Forms.Button BtnLogin;
         private System.Windows.Forms.Button BtnBack;
-        private System.Windows.Forms.Panel PanelChild;
+        public System.Windows.Forms.Panel PanelChild;
     }
 }
 

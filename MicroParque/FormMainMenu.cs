@@ -69,7 +69,7 @@ namespace MicroParque
             child.Dock = DockStyle.Fill;
             this.PanelChild.Controls.Add(child);
             this.PanelChild.Tag = child;
-            this.PanelChild.Size = new System.Drawing.Size(1053, 555);
+            
             child.Show();
         }
 
@@ -81,12 +81,18 @@ namespace MicroParque
 
         private void FrmPal_Load(object sender, EventArgs e)
         {
-
+            this.PanelChild.Size = new System.Drawing.Size(1053, 555);
         }
 
         private void PbHome_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PbTallres_Click(object sender, EventArgs e)
+        {
+            EsconderMenu();
+            openFormChild(new FrmInscripcionTalleres());
         }
     }
 }
