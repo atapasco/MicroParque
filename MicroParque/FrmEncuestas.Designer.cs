@@ -32,15 +32,15 @@ namespace MicroParque
             System.Windows.Forms.Button button1;
             System.Windows.Forms.Panel panel2;
             System.Windows.Forms.Label LblTalleres;
+            System.Windows.Forms.ComboBox comboBox1;
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
             LblTalleres = new System.Windows.Forms.Label();
+            comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -128,29 +128,24 @@ namespace MicroParque
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(78, 469);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(377, 21);
-            this.comboBox1.TabIndex = 29;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label1.Location = new System.Drawing.Point(74, 493);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 19);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Seleccione aqui su encuesta a realizar";
+            comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            comboBox1.BackColor = System.Drawing.Color.Silver;
+            comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            comboBox1.ForeColor = System.Drawing.Color.SeaGreen;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new System.Drawing.Point(78, 469);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new System.Drawing.Size(381, 21);
+            comboBox1.TabIndex = 29;
+            comboBox1.Text = "Seleccione aqui su encuesta a realizar";
             // 
             // FrmEncuestas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1053, 555);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(button1);
@@ -175,7 +170,5 @@ namespace MicroParque
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
     }
 }
