@@ -87,11 +87,11 @@ namespace MicroParque
             this.LblTalleres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LblTalleres.Font = new System.Drawing.Font("Humnst777 BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTalleres.ForeColor = System.Drawing.Color.White;
-            this.LblTalleres.Location = new System.Drawing.Point(43, 30);
+            this.LblTalleres.Location = new System.Drawing.Point(13, 92);
             this.LblTalleres.Name = "LblTalleres";
-            this.LblTalleres.Size = new System.Drawing.Size(512, 90);
+            this.LblTalleres.Size = new System.Drawing.Size(797, 52);
             this.LblTalleres.TabIndex = 1;
-            this.LblTalleres.Text = "INSCRIPCIONES  \r\nTALLERES Y CAPACITACIONES";
+            this.LblTalleres.Text = "INSCRIPCIONES TALLERES Y CAPACITACIONES";
             // 
             // label1
             // 
