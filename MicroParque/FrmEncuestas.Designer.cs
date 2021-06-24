@@ -36,6 +36,8 @@ namespace MicroParque
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             button1 = new System.Windows.Forms.Button();
             panel2 = new System.Windows.Forms.Panel();
             LblTalleres = new System.Windows.Forms.Label();
@@ -43,20 +45,6 @@ namespace MicroParque
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(818, 507);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 27);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -82,6 +70,31 @@ namespace MicroParque
             panel2.Size = new System.Drawing.Size(342, 10);
             panel2.TabIndex = 25;
             // 
+            // LblTalleres
+            // 
+            LblTalleres.AutoSize = true;
+            LblTalleres.Font = new System.Drawing.Font("Humnst777 BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            LblTalleres.ForeColor = System.Drawing.Color.White;
+            LblTalleres.Location = new System.Drawing.Point(30, 90);
+            LblTalleres.Name = "LblTalleres";
+            LblTalleres.Size = new System.Drawing.Size(216, 45);
+            LblTalleres.TabIndex = 1;
+            LblTalleres.Text = "ENCUESTAS";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(818, 507);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(155, 27);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -104,17 +117,6 @@ namespace MicroParque
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // LblTalleres
-            // 
-            LblTalleres.AutoSize = true;
-            LblTalleres.Font = new System.Drawing.Font("Humnst777 BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LblTalleres.ForeColor = System.Drawing.Color.White;
-            LblTalleres.Location = new System.Drawing.Point(30, 90);
-            LblTalleres.Name = "LblTalleres";
-            LblTalleres.Size = new System.Drawing.Size(216, 45);
-            LblTalleres.TabIndex = 1;
-            LblTalleres.Text = "ENCUESTAS";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -124,10 +126,31 @@ namespace MicroParque
             this.dataGridView1.Size = new System.Drawing.Size(895, 250);
             this.dataGridView1.TabIndex = 28;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(78, 469);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(377, 21);
+            this.comboBox1.TabIndex = 29;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(74, 493);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(251, 19);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Seleccione aqui su encuesta a realizar";
+            // 
             // FrmEncuestas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1053, 555);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(button1);
@@ -152,5 +175,7 @@ namespace MicroParque
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
