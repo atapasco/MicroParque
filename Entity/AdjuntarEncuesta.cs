@@ -9,15 +9,15 @@ namespace Entity
 {
     public class AdjuntarEncuesta
     {
-        public FileStream Encuesta { set; get; }
+        public string NombreDeArchivoEncuesta { set; get; }
         public string Tipo { set; get; }
         public List<string> preguntas { set; get; }
         public List<string> respuestas { set; get; }
 
         
-        public AdjuntarEncuesta(FileStream encuesta, string tipo)
+        public AdjuntarEncuesta(string encuesta, string tipo)
         {
-            this.Encuesta = encuesta;
+            this.NombreDeArchivoEncuesta = encuesta;
             this.Tipo = tipo;
         }
         public AdjuntarEncuesta()
