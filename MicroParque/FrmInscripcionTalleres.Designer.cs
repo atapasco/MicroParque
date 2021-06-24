@@ -31,6 +31,7 @@ namespace MicroParque
         {
             System.Windows.Forms.Label label2;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LblTalleres = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@ namespace MicroParque
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,6 +49,16 @@ namespace MicroParque
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label2
+            // 
+            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(98, 334);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(49, 13);
+            label2.TabIndex = 3;
+            label2.Text = "Telefono";
             // 
             // panel1
             // 
@@ -60,6 +70,17 @@ namespace MicroParque
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1055, 153);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::MicroParque.Properties.Resources.logo_blanco_y_negro;
+            this.pictureBox1.Location = new System.Drawing.Point(908, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(117, 136);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // LblTalleres
             // 
@@ -75,6 +96,7 @@ namespace MicroParque
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 13);
@@ -99,15 +121,6 @@ namespace MicroParque
             this.textBox2.Size = new System.Drawing.Size(166, 20);
             this.textBox2.TabIndex = 4;
             // 
-            // label2
-            // 
-            label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            label2.Location = new System.Drawing.Point(98, 334);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(49, 13);
-            label2.TabIndex = 3;
-            label2.Text = "Telefono";
-            // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -120,6 +133,7 @@ namespace MicroParque
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(601, 334);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 13);
@@ -138,6 +152,7 @@ namespace MicroParque
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(601, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
@@ -156,22 +171,12 @@ namespace MicroParque
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(98, 441);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Nombre Del Taller";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::MicroParque.Properties.Resources.logo_blanco_y_negro;
-            this.pictureBox1.Location = new System.Drawing.Point(909, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(117, 124);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -187,6 +192,7 @@ namespace MicroParque
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(604, 495);
             this.button1.Name = "button1";
@@ -200,6 +206,7 @@ namespace MicroParque
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(791, 495);
             this.button2.Name = "button2";

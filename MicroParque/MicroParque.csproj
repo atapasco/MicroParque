@@ -52,6 +52,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEncuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEncuestas.Designer.cs">
+      <DependentUpon>FrmEncuestas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInscripcionTalleres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEncuestas.resx">
+      <DependentUpon>FrmEncuestas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionTalleres.resx">
       <DependentUpon>FrmInscripcionTalleres.cs</DependentUpon>

@@ -42,10 +42,10 @@ namespace MicroParque
             // 
             // PanelChild
             // 
-            this.PanelChild.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelChild.Location = new System.Drawing.Point(0, 0);
+            this.PanelChild.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelChild.Location = new System.Drawing.Point(1, -3);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1036, 1108);
+            this.PanelChild.Size = new System.Drawing.Size(1036, 555);
             this.PanelChild.TabIndex = 7;
             // 
             // BtnLogin
@@ -88,6 +88,7 @@ namespace MicroParque
             this.PbEncuestas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbEncuestas.TabIndex = 5;
             this.PbEncuestas.TabStop = false;
+            this.PbEncuestas.Click += new System.EventHandler(this.PbEncuestas_Click);
             // 
             // PbTallres
             // 
@@ -106,7 +107,7 @@ namespace MicroParque
             this.PbHome.Image = global::MicroParque.Properties.Resources.fotos1;
             this.PbHome.Location = new System.Drawing.Point(1, -3);
             this.PbHome.Name = "PbHome";
-            this.PbHome.Size = new System.Drawing.Size(1035, 538);
+            this.PbHome.Size = new System.Drawing.Size(1019, 538);
             this.PbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbHome.TabIndex = 0;
             this.PbHome.TabStop = false;
@@ -118,7 +119,7 @@ namespace MicroParque
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(24)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(1053, 550);
+            this.ClientSize = new System.Drawing.Size(1037, 550);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.PbEncuestas);

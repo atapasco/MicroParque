@@ -59,29 +59,30 @@ namespace MicroParque
 
         public void openFormChild(object formChild)
         {
-            if (this.PanelChild.Controls.Count > 0)
+            if (PanelChild.Controls.Count > 0)
             {
-                this.PanelChild.Controls.RemoveAt(0);
+                PanelChild.Controls.RemoveAt(0);
             }
 
             Form child = formChild as Form;
             child.TopLevel = false;
             child.Dock = DockStyle.Fill;
-            this.PanelChild.Controls.Add(child);
-            this.PanelChild.Tag = child;
+            PanelChild.Controls.Add(child);
+            PanelChild.Size = new System.Drawing.Size(1053, 555);
+            PanelChild.Tag = child;
             
             child.Show();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            this.PanelChild.Controls.RemoveAt(0);
+            PanelChild.Controls.RemoveAt(0);
             MostrarMenu();
         }
 
         private void FrmPal_Load(object sender, EventArgs e)
         {
-            this.PanelChild.Size = new System.Drawing.Size(1053, 555);
+            PanelChild.Size = new System.Drawing.Size(1053, 555);
         }
 
         private void PbHome_Click(object sender, EventArgs e)
@@ -93,6 +94,12 @@ namespace MicroParque
         {
             EsconderMenu();
             openFormChild(new FrmInscripcionTalleres());
+        }
+
+        private void PbEncuestas_Click(object sender, EventArgs e)
+        {
+            EsconderMenu();
+            openFormChild(new FrmEncuestas());
         }
     }
 }
