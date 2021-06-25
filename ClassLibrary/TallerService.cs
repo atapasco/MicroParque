@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DAL;
 using Entity;
 
-namespace ClassLibrary
+namespace BLL
 {
     public class TallerService
     {
