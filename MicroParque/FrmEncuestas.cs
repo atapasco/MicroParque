@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
 
 namespace MicroParque
 {
@@ -23,9 +24,24 @@ namespace MicroParque
 
         private void FrmEncuestas_Load(object sender, EventArgs e)
         {
+            int i = 0;
             encuesta.ConsultarNombresDeLosArchivo();
-            dataGridView1.DataSource = (encuesta.ConsultarNombresDeLosArchivo().AdjuntarNombreEncuestas);
+            
+            foreach (AdjuntarEncuesta item in encuesta.ConsultarNombresDeLosArchivo().AdjuntarNombreEncuestas)
+            {
+                dataGridView1.Rows.Add();
+
+                dataGridView1[0, i].Value = (item.NombreDeArchivoEncuesta);
+                dataGridView1[1, i].Value = (item.Tipo);
+                i++;
+            }
+            
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Humanst521 BT", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -54,7 +54,7 @@ namespace DAL
             string linea = string.Empty;
             while ((linea = reader.ReadLine()) != null)
             {
-                AdjuntarEncuesta nombreEncuesta = MapeadoDeNombreDeArchivo(decodificacion.DecodificacionDeCadenas(linea));
+                AdjuntarEncuesta nombreEncuesta = MapeadoDeNombreDeArchivo(linea);
                 nombreEncuestas.Add(nombreEncuesta);
             }
             reader.Close();
