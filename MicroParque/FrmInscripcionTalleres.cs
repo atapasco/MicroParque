@@ -1,9 +1,9 @@
-﻿using Entity;
+﻿using BLL;
+using Entity;
 using System;
-using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
-using BLL;
 
 namespace MicroParque
 {
@@ -14,6 +14,7 @@ namespace MicroParque
         {
             InitializeComponent();
             inscripcion = new InscripcionTaller();
+            LblValidarDatos.Hide();
         }
 
         private void FrmInscripcionTalleres_Load(object sender, EventArgs e)
@@ -33,7 +34,18 @@ namespace MicroParque
             inscripcion.Correo = TxtCorreo.Text;
         }
 
-
+        private void VaciarCampos()
+        {
+            TxtPrimerNombre.Text = string.Empty;
+            TxtSegundoNombre.Text = string.Empty;
+            TxtPrimerApellido.Text = string.Empty;
+            TxtSegundoApellido.Text = string.Empty;
+            TxtTelefono.Text = string.Empty;
+            TxtNivelAcademico.Text = string.Empty;
+            TxtFormacionSuperior.Text = string.Empty;
+            TxtNombreTaller.Text = string.Empty;
+            TxtCorreo.Text = string.Empty;
+        }
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
 
@@ -46,19 +58,27 @@ namespace MicroParque
             ValidarCorreo();
             ValidarCamposVacio();
             MapearTxtTalleres();
-            TallerService tallerService = new TallerService();
-            tallerService.Guardar(inscripcion);
-           
+            if (errorProviderValDatos.GetError(BtnGuardar).Equals(""))
+            {
+                TallerService tallerService = new TallerService();
+                LblValidarDatos.Text = tallerService.Guardar(inscripcion);
+                LblValidarDatos.Show();
+                VaciarCampos();
+
+            }
+            
+
         }
 
         private void ValidarCamposVacio()
         {
-            if(TxtCorreo.Text == string.Empty || TxtFormacionSuperior.Text == string.Empty || TxtNivelAcademico.Text == string.Empty ||
+            if (TxtCorreo.Text == string.Empty || TxtFormacionSuperior.Text == string.Empty || TxtNivelAcademico.Text == string.Empty ||
                 TxtNombreTaller.Text == string.Empty || TxtPrimerApellido.Text == string.Empty || TxtPrimerNombre.Text == string.Empty ||
                 TxtSegundoApellido.Text == string.Empty || TxtTelefono.Text == string.Empty)
             {
                 errorProviderValDatos.SetError(BtnGuardar, "Error, Verifique que: no existan campos vacios");
-            }else errorProviderValDatos.Clear();
+            }
+            else errorProviderValDatos.Clear();
         }
 
         private bool ValidarCampos(string campos)
@@ -98,12 +118,13 @@ namespace MicroParque
                 {
                     i = 57;
                 }
-                
+
             }
             if (validarNumeros == true)
             {
                 errorProviderValDatos.SetError(BtnGuardar, "Error, Verifique que: no existan Letras en Numero de telefono");
-            }else errorProviderValDatos.Clear();
+            }
+            else errorProviderValDatos.Clear();
             return validarNumeros;
         }
 
@@ -149,5 +170,12 @@ namespace MicroParque
             else errorProviderValDatos.Clear();
         }
 
+        private void TxtPrimerNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtPrimerNombre.Text != string.Empty)
+            {
+                LblValidarDatos.Hide();
+            }
+        }
     }
 }

@@ -124,6 +124,7 @@ namespace MicroParque
             this.TxtPrimerNombre.Name = "TxtPrimerNombre";
             this.TxtPrimerNombre.Size = new System.Drawing.Size(166, 20);
             this.TxtPrimerNombre.TabIndex = 2;
+            this.TxtPrimerNombre.TextChanged += new System.EventHandler(this.TxtPrimerNombre_TextChanged);
             // 
             // TxtTelefono
             // 
@@ -297,11 +298,12 @@ namespace MicroParque
             // LblValidarDatos
             // 
             this.LblValidarDatos.AutoSize = true;
+            this.LblValidarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblValidarDatos.Location = new System.Drawing.Point(601, 441);
             this.LblValidarDatos.Name = "LblValidarDatos";
-            this.LblValidarDatos.Size = new System.Drawing.Size(35, 13);
+            this.LblValidarDatos.Size = new System.Drawing.Size(17, 13);
             this.LblValidarDatos.TabIndex = 20;
-            this.LblValidarDatos.Text = "label9";
+            this.LblValidarDatos.Text = "lbl";
             // 
             // TxtCorreo
             // 
