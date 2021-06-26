@@ -11,7 +11,6 @@ namespace Entity
         public string Nombre { set; get; }
         public int CantidadAsistentes { set; get; }
         public DateTime Fecha { set; get; }
-        public DateTime Hora { set; get; }
         public bool Disponibilidad { set; get; }
 
         public Taller(string nombre, int cantidadAsistentes, DateTime fecha,
@@ -20,7 +19,6 @@ namespace Entity
             this.Nombre = nombre;
             this.CantidadAsistentes = cantidadAsistentes;
             this.Fecha = fecha;
-            this.Hora = hora;
             this.Disponibilidad = disponibilidad;
         }
         public Taller()

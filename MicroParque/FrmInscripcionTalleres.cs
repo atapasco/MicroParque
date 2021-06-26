@@ -61,7 +61,7 @@ namespace MicroParque
             if (errorProviderValDatos.GetError(BtnGuardar).Equals(""))
             {
                 TallerService tallerService = new TallerService();
-                LblValidarDatos.Text = tallerService.Guardar(inscripcion);
+                LblValidarDatos.Text = tallerService.GuardarInscripcionesTaller(inscripcion);
                 LblValidarDatos.Show();
                 VaciarCampos();
 
