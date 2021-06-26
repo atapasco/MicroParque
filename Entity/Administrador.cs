@@ -102,53 +102,8 @@ namespace Entity
             }
         }
 
-        public string EnvioDeCorreo()
-        {
-            string mensaje = null;
-            string correoDelMicroParque = "atapasco@unicesar.edu.co";
-            string NombreDelCorreo = "MicroParque";
-            try
-            {
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress(correoDelMicroParque, NombreDelCorreo);
-                mail.To.Add(this.Correo);
+        
 
-                mail.Subject = "INTENTO DE INGRESO";
-                mail.Body = $"Usuario {this.Usuario} Alguien esta intentando entrar a tu cuenta, direeccion ip: {SacarIp()}";
-                mail.IsBodyHtml = false;
-
-
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Aquí debes sustituir tu servidor SMTP y el puerto
-                client.Credentials = new NetworkCredential(correoDelMicroParque, "lossauces123");
-                client.EnableSsl = true;//En caso de que tu servidor de correo no utilice cifrado SSL,poner en false
-
-
-                client.Send(mail);
-                mensaje = "se ha enviado un correo por exceder los 10 intentos";
-
-            }
-            catch (Exception e)
-            {
-                return $"Error: {e}";
-            }
-
-            return mensaje;
-        }
-
-        static string SacarIp()
-        {
-            IPHostEntry host;
-            string localIP = "";
-            host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (IPAddress ip in host.AddressList)
-            {
-                if (ip.AddressFamily.ToString() == "InterNetwork")
-                {
-                    localIP = ip.ToString();
-                }
-            }
-
-            return localIP;
-        }
+        
     }
 }

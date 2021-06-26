@@ -1,6 +1,8 @@
 ﻿using DAL;
 using Entity;
 using System;
+using System.Net;
+using System.Net.Mail;
 using System.Collections.Generic;
 
 namespace BLL
@@ -206,6 +208,35 @@ namespace BLL
                 inscripcionTalleresTryCach = new InscripcionTalleresTryCach($"Error: {e.Message}");
 
                 return inscripcionTalleresTryCach;
+            }
+        }
+
+        public string EnvioDeCorreo(string correo, string mensaje, string tituloMensaje)
+        {
+            string correoDelMicroParque = "atapasco@unicesar.edu.co";
+            string NombreDelCorreo = "MicroParque";
+            try
+            {
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(correoDelMicroParque, NombreDelCorreo);
+                mail.To.Add(correo);
+
+                mail.Subject = tituloMensaje;
+                mail.Body = mensaje;
+                mail.IsBodyHtml = false;
+
+
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587); //Aquí debes sustituir tu servidor SMTP y el puerto
+                client.Credentials = new NetworkCredential(correoDelMicroParque, "lossauces123");
+                client.EnableSsl = true;//En caso de que tu servidor de correo no utilice cifrado SSL,poner en false
+
+
+                client.Send(mail);
+                return "";
+            }
+            catch (Exception e)
+            {
+                return $"Error: {e}";
             }
         }
 
