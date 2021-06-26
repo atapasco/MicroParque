@@ -52,11 +52,17 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEncuestas.cs">
+    <Compile Include="FrmEncuesta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEncuestas.Designer.cs">
-      <DependentUpon>FrmEncuestas.cs</DependentUpon>
+    <Compile Include="FrmEncuesta.Designer.cs">
+      <DependentUpon>FrmEncuesta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRealizarEncuestas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRealizarEncuestas.Designer.cs">
+      <DependentUpon>FrmRealizarEncuestas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInscripcionTalleres.cs">
       <SubType>Form</SubType>
@@ -76,13 +82,37 @@
     <Compile Include="FrmPal.Designer.cs">
       <DependentUpon>FrmPal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRestaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRestaurante.Designer.cs">
+      <DependentUpon>FrmRestaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTalleres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTalleres.Designer.cs">
+      <DependentUpon>FrmTalleres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ListTalleres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListTalleres.Designer.cs">
+      <DependentUpon>ListTalleres.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEncuestas.resx">
-      <DependentUpon>FrmEncuestas.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRealizarEncuestas.resx">
+      <DependentUpon>FrmRealizarEncuestas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInscripcionTalleres.resx">
       <DependentUpon>FrmInscripcionTalleres.cs</DependentUpon>
@@ -92,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPal.resx">
       <DependentUpon>FrmPal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTalleres.resx">
+      <DependentUpon>FrmTalleres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ListTalleres.resx">
+      <DependentUpon>ListTalleres.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +191,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\barra menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\1654193.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

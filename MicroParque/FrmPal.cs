@@ -48,5 +48,25 @@ namespace MicroParque
         {
 
         }
+
+        private void BtnTalleres_Click(object sender, EventArgs e)
+        {
+            openFormChild(new FrmTalleres());
+        }
+        public void openFormChild(object formChild)
+        {
+            if (PanelChild.Controls.Count > 0)
+            {
+                PanelChild.Controls.RemoveAt(0);
+            }
+
+            Form child = formChild as Form;
+            child.TopLevel = false;
+            child.Dock = DockStyle.Fill;
+            PanelChild.Controls.Add(child);
+            PanelChild.Tag = child;
+
+            child.Show();
+        }
     }
 }

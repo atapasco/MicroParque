@@ -1,7 +1,7 @@
 ﻿
 namespace MicroParque
 {
-    partial class FrmEncuestas
+    partial class FrmRealizarEncuestas
     {
         /// <summary>
         /// Required designer variable.
