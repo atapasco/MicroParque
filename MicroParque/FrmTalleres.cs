@@ -21,6 +21,7 @@ namespace MicroParque
         {
             CargarTalleresControl();
             ClientSize = new Size(1000, 505);
+            flowLayoutPanel1.Size = new Size(670, 515);
         }
 
         private void CargarTalleresControl()
