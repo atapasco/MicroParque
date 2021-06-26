@@ -107,7 +107,7 @@ namespace MicroParque
             this.PbHome.Image = global::MicroParque.Properties.Resources.fotos1;
             this.PbHome.Location = new System.Drawing.Point(1, -3);
             this.PbHome.Name = "PbHome";
-            this.PbHome.Size = new System.Drawing.Size(1019, 538);
+            this.PbHome.Size = new System.Drawing.Size(1036, 538);
             this.PbHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PbHome.TabIndex = 0;
             this.PbHome.TabStop = false;
@@ -119,7 +119,7 @@ namespace MicroParque
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(0, 60);
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(24)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(1037, 550);
+            this.ClientSize = new System.Drawing.Size(1054, 550);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnLogin);
             this.Controls.Add(this.PbEncuestas);

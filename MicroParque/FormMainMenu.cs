@@ -99,7 +99,7 @@ namespace MicroParque
         private void PbEncuestas_Click(object sender, EventArgs e)
         {
             EsconderMenu();
-            openFormChild(new FrmEncuestas());
+            openFormChild(new FrmRealizarEncuestas());
         }
     }
 }

@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnTalleres = new System.Windows.Forms.Button();
+            this.PanelChild = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1200000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -50,63 +51,34 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // BtnTalleres
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Location = new System.Drawing.Point(183, 385);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 326);
-            this.panel1.TabIndex = 1;
+            this.BtnTalleres.BackColor = System.Drawing.Color.Turquoise;
+            this.BtnTalleres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnTalleres.Font = new System.Drawing.Font("Langdon", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnTalleres.Location = new System.Drawing.Point(332, 50);
+            this.BtnTalleres.Name = "BtnTalleres";
+            this.BtnTalleres.Size = new System.Drawing.Size(104, 65);
+            this.BtnTalleres.TabIndex = 5;
+            this.BtnTalleres.Text = "TALLERES";
+            this.BtnTalleres.UseVisualStyleBackColor = false;
+            this.BtnTalleres.Click += new System.EventHandler(this.BtnTalleres_Click);
             // 
-            // panel2
+            // PanelChild
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel2.Location = new System.Drawing.Point(520, 533);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 317);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel3.Location = new System.Drawing.Point(520, 192);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 326);
-            this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel4.Location = new System.Drawing.Point(183, 729);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 326);
-            this.panel4.TabIndex = 3;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(161, 1061);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(717, 134);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1200000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.PanelChild.Location = new System.Drawing.Point(8, 170);
+            this.PanelChild.Name = "PanelChild";
+            this.PanelChild.Size = new System.Drawing.Size(1066, 505);
+            this.PanelChild.TabIndex = 6;
             // 
             // Frm_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1086, 554);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.SeaGreen;
+            this.ClientSize = new System.Drawing.Size(1103, 554);
+            this.Controls.Add(this.PanelChild);
+            this.Controls.Add(this.BtnTalleres);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Main";
@@ -117,7 +89,6 @@
             this.Click += new System.EventHandler(this.Frm_Main_Click);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Frm_Main_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,11 +96,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button BtnTalleres;
+        private System.Windows.Forms.Panel PanelChild;
     }
 }

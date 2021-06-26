@@ -13,10 +13,10 @@ using Entity;
 
 namespace MicroParque
 {
-    public partial class FrmEncuestas : Form
+    public partial class FrmRealizarEncuestas : Form
     {
         EncuestaService encuesta;
-        public FrmEncuestas()
+        public FrmRealizarEncuestas()
         {
             InitializeComponent();
             encuesta = new EncuestaService();
