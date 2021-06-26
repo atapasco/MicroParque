@@ -41,11 +41,11 @@ namespace MicroParque
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Langdon", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(27, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 37);
+            this.label1.Size = new System.Drawing.Size(289, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "GESTION DE TALLERES";
             // 
@@ -65,11 +65,12 @@ namespace MicroParque
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightGray;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(349, -1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(720, 515);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(716, 515);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(34, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 36);
@@ -79,6 +80,7 @@ namespace MicroParque
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(34, 421);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(270, 36);
@@ -88,6 +90,7 @@ namespace MicroParque
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(34, 337);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(270, 36);

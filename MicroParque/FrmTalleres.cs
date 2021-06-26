@@ -20,6 +20,7 @@ namespace MicroParque
         private void FrmTalleres_Load(object sender, EventArgs e)
         {
             CargarTalleresControl();
+            ClientSize = new Size(1000, 505);
         }
 
         private void CargarTalleresControl()
