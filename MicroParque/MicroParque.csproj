@@ -111,6 +111,9 @@
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEncuesta.resx">
+      <DependentUpon>FrmEncuesta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRealizarEncuestas.resx">
       <DependentUpon>FrmRealizarEncuestas.cs</DependentUpon>
     </EmbeddedResource>

@@ -41,7 +41,7 @@ namespace DAL
             string linea = string.Empty;
             while ((linea = reader.ReadLine()) != null)
             {
-                Taller taller = MapeadoDeTaller(codificacion.DecodificacionDeCadenas(linea));
+                Taller taller = MapeadoDeTaller(linea);
                 talleres.Add(taller);
             }
             reader.Close();

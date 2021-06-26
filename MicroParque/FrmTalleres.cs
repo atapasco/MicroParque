@@ -7,33 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
+using BLL;
+using Entity;
 
 namespace MicroParque
 {
     public partial class FrmTalleres : Form
     {
+        private TallerService tallerService;
         public FrmTalleres()
         {
             InitializeComponent();
+            tallerService = new TallerService();
         }
 
         private void FrmTalleres_Load(object sender, EventArgs e)
         {
             CargarTalleresControl();
             ClientSize = new Size(1000, 505);
-            flowLayoutPanel1.Size = new Size(670, 515);
+            flowLayoutPanel1.Size = new Size(650, 515);
         }
 
         private void CargarTalleresControl()
         {
-            ListTalleres[] listTalleres = new ListTalleres[50];
-            for (int i = 0; i < listTalleres.Length; i++)
+            int cantidadTalleres;
+            List<Taller> talleres = new List<Taller>();
+            talleres = tallerService.ConsultaGeneralDeTalleres().Talleres;
+            cantidadTalleres = talleres.Count;
+            ListTalleres[] listTalleres = new ListTalleres[100];
+            for (int i = 0; i < cantidadTalleres; i++)
             {
                 listTalleres[i] = new ListTalleres();
-                listTalleres[i].nombreTaller = "get data";
-                listTalleres[i].personasAceptadas = "get data";
+                listTalleres[i].nombreTaller = talleres[i].Nombre;
+                listTalleres[i].personasAceptadas = Convert.ToString(talleres[i].CantidadAsistentes);
                 listTalleres[i].personasPendientes = "get data";
-                listTalleres[i].fechayHora = "get data";
+                listTalleres[i].fechayHora = Convert.ToString(talleres[i].Fecha);
                 if (flowLayoutPanel1.Controls.Count < 0)
                 {
                     flowLayoutPanel1.Controls.Clear();
@@ -43,5 +52,9 @@ namespace MicroParque
             }
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

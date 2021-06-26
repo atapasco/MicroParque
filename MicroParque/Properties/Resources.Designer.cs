@@ -181,6 +181,15 @@ namespace MicroParque.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a .
+        /// </summary>
+        internal static string nombreArchivo {
+            get {
+                return ResourceManager.GetString("nombreArchivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap pagina_pal {
