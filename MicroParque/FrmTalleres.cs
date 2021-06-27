@@ -124,25 +124,21 @@ namespace MicroParque
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            openFormChild(new FrmAgregarTaller());
+            flowLayoutPanel1.Controls.Clear();
+            openFormChild(new CtrlAgregar());
 
         }
 
 
-        public void openFormChild(object formChild)
+        public void openFormChild(Control formChild)
         {
-            if (flowLayoutPanel1.Controls.Count > 0)
+            if (flowLayoutPanel1.Controls.Count < 0)
             {
-                flowLayoutPanel1.Controls.RemoveAt(0);
+                flowLayoutPanel1.Controls.Clear();
             }
+            flowLayoutPanel1.Controls.Add(formChild);
 
-            Form child = formChild as Form;
-            child.TopLevel = false;
-            child.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Controls.Add(child);
-            flowLayoutPanel1.Tag = child;
-
-            child.Show();
+           
         }
     }
 }

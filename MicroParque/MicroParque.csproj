@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CtrlAgregar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlAgregar.Designer.cs">
+      <DependentUpon>CtrlAgregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="ListTalleres.Designer.cs">
       <DependentUpon>ListTalleres.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CtrlAgregar.resx">
+      <DependentUpon>CtrlAgregar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
