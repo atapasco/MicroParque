@@ -87,5 +87,23 @@ namespace MicroParque
             CargarTalleresControl();
 
         }
+
+        public void MostrarModicar()
+        {
+            BtnAceptar.Show();
+            dateTimePicker1.Show();
+            BtnEliminar.Hide();
+            BtnAgregar.Hide();
+            BtnModificar.Hide();
+        }
+
+        public void OcultarModicar()
+        {
+            BtnAceptar.Hide();
+            dateTimePicker1.Hide();
+            BtnEliminar.Show();
+            BtnAgregar.Show();
+            BtnModificar.Show();
+        }
     }
 }
