@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ClassLibrary;
-using BLL;
+﻿using BLL;
 using Entity;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace MicroParque
 {
@@ -30,8 +24,8 @@ namespace MicroParque
         private void FrmTalleres_Load(object sender, EventArgs e)
         {
             CargarTalleresControl();
-            ClientSize = new Size(1000, 505);
-            flowLayoutPanel1.Size = new Size(650, 515);
+            ClientSize = new Size(1011, 373);
+            flowLayoutPanel1.Size = new Size(686, 373);
         }
 
         private void CargarTalleresControl()
@@ -68,22 +62,14 @@ namespace MicroParque
         {
             for (int i = 0; i < cantidadTalleres; i++)
             {
-                if(listTalleres[i].opcion == "Abrir")
+                if (listTalleres[i].opcion == "Abrir")
                 {
                     nombreTallerSeleccionado = listTalleres[i].nombreTaller;
                 }
-                if (listTalleres[i].opcion == "Eliminar")
-                {
-                    opcion = "Eliminar";
-                    nombreTallerSeleccionado = listTalleres[i].nombreTaller;
-                }
+                
                 listTalleres[i].opcion = string.Empty;
             }
-            if(opcion == "Eliminar")
-            {
-                tallerService.EliminarTaller(nombreTallerSeleccionado);
-                CargarTalleresControl();
-            }
+            
             opcion = string.Empty;
             label2.Text = nombreTallerSeleccionado;
             timer1.Stop();
@@ -98,6 +84,10 @@ namespace MicroParque
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            tallerService.EliminarTaller(nombreTallerSeleccionado);
+            CargarTalleresControl();
+
         }
     }
 }

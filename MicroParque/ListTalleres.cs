@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 using System;
+using System.Drawing;
 
 namespace MicroParque
 {
@@ -9,6 +10,7 @@ namespace MicroParque
         public ListTalleres()
         {
             InitializeComponent();
+            this.BackColor = Color.White;
 
         }
 
@@ -56,14 +58,33 @@ namespace MicroParque
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ListTalleres_MouseLeave(object sender, EventArgs e)
         {
-            this.opcion = "Abrir";
+            //this.BackColor = Color.White;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ListTalleres_MouseHover(object sender, EventArgs e)
         {
-            this.opcion = "Eliminar";
+            this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseEnter(object sender, EventArgs e)
+        {
+            //this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (this.BackColor == Color.Silver)
+            {
+                this.BackColor = Color.White;
+            }
+            else this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.opcion = "Abrir";
         }
     }
 }
