@@ -42,7 +42,7 @@ namespace MicroParque
                 listTalleres[i] = new ListTalleres();
                 listTalleres[i].NombreTaller(talleres[i].Nombre);
                 listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
-                listTalleres[i].PersonasPendientes(1);
+                listTalleres[i].PersonasPendientes(inscripcionTalleres.Count);
                 listTalleres[i].FechayHora(talleres[i].Fecha);
                 if (flowLayoutPanel1.Controls.Count < 0)
                 {
@@ -88,6 +88,12 @@ namespace MicroParque
             tallerService.EliminarTaller(nombreTallerSeleccionado);
             CargarTalleresControl();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //tallerService.ModificarFechaTaller(nombreTaller, d)
+            CargarTalleresControl();
         }
     }
 }
