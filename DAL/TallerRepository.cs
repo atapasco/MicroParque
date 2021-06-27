@@ -177,14 +177,17 @@ namespace DAL
                 {
                     GuardarTaller(item);
                 }
+                else if (nombreTaller == item.Nombre)
+                {
+                    item.Fecha = fechaNueva;
+                    GuardarTaller(item);
+                }
             }
 
             foreach (var item in talleres)
             {
                 if (nombreTaller == item.Nombre)
                 {
-                    item.Fecha = fechaNueva;
-                    GuardarTaller(item);
                     return true;
                 }
             }

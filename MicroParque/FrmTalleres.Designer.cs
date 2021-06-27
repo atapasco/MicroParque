@@ -86,6 +86,7 @@ namespace MicroParque
             this.BtnModificar.TabIndex = 4;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = false;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 
@@ -152,6 +153,7 @@ namespace MicroParque
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = false;
             this.BtnAceptar.Visible = false;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // FrmTalleres
             // 

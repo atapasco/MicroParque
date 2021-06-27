@@ -115,6 +115,7 @@ namespace MicroParque
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
@@ -132,6 +133,7 @@ namespace MicroParque
             this.Load += new System.EventHandler(this.ListTalleres_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListTalleres_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListTalleres_MouseDoubleClick);
+            this.MouseCaptureChanged += new System.EventHandler(this.ListTalleres_MouseCaptureChanged);
             this.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             this.panel1.ResumeLayout(false);

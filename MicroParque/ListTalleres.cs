@@ -75,6 +75,7 @@ namespace MicroParque
 
         private void ListTalleres_MouseClick(object sender, MouseEventArgs e)
         {
+            this.opcion = "Seleccionar";
             if (this.BackColor == Color.Silver)
             {
                 this.BackColor = Color.White;
@@ -85,6 +86,20 @@ namespace MicroParque
         private void ListTalleres_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.opcion = "Abrir";
+        }
+
+        private void ListTalleres_MouseCaptureChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.opcion = "Seleccionar";
+            if (this.BackColor == Color.Silver)
+            {
+                this.BackColor = Color.White;
+            }
+            else this.BackColor = Color.Silver;
         }
     }
 }

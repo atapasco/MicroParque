@@ -11,7 +11,7 @@ namespace MicroParque
     {
         private string opcion;
         private int cantidadTalleres;
-        private string nombreTallerSeleccionado = string.Empty;
+        public string nombreTallerSeleccionado = string.Empty;
         private ListTalleres[] listTalleres;
         private TallerService tallerService;
         public FrmTalleres()
@@ -38,7 +38,7 @@ namespace MicroParque
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < cantidadTalleres; i++)
             {
-                inscripcionTalleres = tallerService.FiltroPorEstadoYTaller("PENDIENTE",talleres[i].Nombre).Talleres;
+                inscripcionTalleres = tallerService.FiltroPorEstadoYTaller("PENDIENTE", talleres[i].Nombre).Talleres;
                 listTalleres[i] = new ListTalleres();
                 listTalleres[i].NombreTaller(talleres[i].Nombre);
                 listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
@@ -62,16 +62,15 @@ namespace MicroParque
         {
             for (int i = 0; i < cantidadTalleres; i++)
             {
-                if (listTalleres[i].opcion == "Abrir")
+                if (listTalleres[i].opcion == "Seleccionar")
                 {
                     nombreTallerSeleccionado = listTalleres[i].nombreTaller;
                 }
-                
+
                 listTalleres[i].opcion = string.Empty;
             }
-            
+
             opcion = string.Empty;
-            label2.Text = nombreTallerSeleccionado;
             timer1.Stop();
             timer1.Interval = 1;
             timer1.Start();
@@ -106,6 +105,21 @@ namespace MicroParque
             BtnEliminar.Show();
             BtnAgregar.Show();
             BtnModificar.Show();
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            if (nombreTallerSeleccionado != string.Empty)
+            {
+                MostrarModicar();
+            }            
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            tallerService.ModificarFechaTaller(nombreTallerSeleccionado, dateTimePicker1.Value);
+            CargarTalleresControl();
+            OcultarModicar();
         }
     }
 }
