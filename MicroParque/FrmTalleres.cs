@@ -90,10 +90,22 @@ namespace MicroParque
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void MostrarModicar()
         {
-            //tallerService.ModificarFechaTaller(nombreTaller, d)
-            CargarTalleresControl();
+            BtnAceptar.Show();
+            dateTimePicker1.Show();
+            BtnEliminar.Hide();
+            BtnAgregar.Hide();
+            BtnModificar.Hide();
+        }
+
+        public void OcultarModicar()
+        {
+            BtnAceptar.Hide();
+            dateTimePicker1.Hide();
+            BtnEliminar.Show();
+            BtnAgregar.Show();
+            BtnModificar.Show();
         }
     }
 }

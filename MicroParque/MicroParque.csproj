@@ -52,6 +52,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgregarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarTaller.Designer.cs">
+      <DependentUpon>FrmAgregarTaller.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmContenidoTalleres.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarTaller.resx">
+      <DependentUpon>FrmAgregarTaller.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmContenidoTalleres.resx">
       <DependentUpon>FrmContenidoTalleres.cs</DependentUpon>
