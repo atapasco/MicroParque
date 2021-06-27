@@ -69,7 +69,7 @@ namespace DAL
             string linea = string.Empty;
             while ((linea = reader.ReadLine()) != null)
             {
-                InscripcionTaller inscrito = MapeadoDeInscripcionTaller(codificacion.DecodificacionDeCadenas(linea));
+                InscripcionTaller inscrito = MapeadoDeInscripcionTaller(linea);
                 inscritos.Add(inscrito);
             }
             reader.Close();
