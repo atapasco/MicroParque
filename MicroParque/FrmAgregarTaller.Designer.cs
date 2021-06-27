@@ -31,14 +31,14 @@ namespace MicroParque
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnombreTaller = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txthora = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,12 +57,12 @@ namespace MicroParque
             this.panel2.Size = new System.Drawing.Size(690, 35);
             this.panel2.TabIndex = 1;
             // 
-            // textBox1
+            // txtnombreTaller
             // 
-            this.textBox1.Location = new System.Drawing.Point(59, 100);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtnombreTaller.Location = new System.Drawing.Point(59, 100);
+            this.txtnombreTaller.Name = "txtnombreTaller";
+            this.txtnombreTaller.Size = new System.Drawing.Size(323, 20);
+            this.txtnombreTaller.TabIndex = 2;
             // 
             // label1
             // 
@@ -73,14 +73,14 @@ namespace MicroParque
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre Taller";
             // 
-            // dateTimePicker1
+            // dtpfecha
             // 
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.SeaGreen;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.dateTimePicker1.Location = new System.Drawing.Point(59, 180);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(323, 20);
-            this.dateTimePicker1.TabIndex = 5;
+            this.dtpfecha.CalendarTitleBackColor = System.Drawing.Color.SeaGreen;
+            this.dtpfecha.CalendarTrailingForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.dtpfecha.Location = new System.Drawing.Point(59, 180);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(323, 20);
+            this.dtpfecha.TabIndex = 5;
             // 
             // label2
             // 
@@ -108,6 +108,7 @@ namespace MicroParque
             this.button1.TabIndex = 9;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -117,26 +118,27 @@ namespace MicroParque
             this.button2.TabIndex = 10;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox2
+            // txthora
             // 
-            this.textBox2.Location = new System.Drawing.Point(59, 261);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 11;
+            this.txthora.Location = new System.Drawing.Point(59, 261);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(136, 20);
+            this.txthora.TabIndex = 11;
             // 
             // FrmAgregarTaller
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(686, 373);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txthora);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnombreTaller);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -151,13 +153,13 @@ namespace MicroParque
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnombreTaller;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txthora;
     }
 }
