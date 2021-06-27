@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
+using System;
 
 namespace MicroParque
 {
@@ -16,36 +17,53 @@ namespace MicroParque
         public string personasAceptadas;
         public string personasPendientes;
         public string fechayHora;
+        public string opcion;
 
         [Category("Custom Props")]
-        public string NombreTaller
+        public void NombreTaller(string nombre)
         {
-            get { return nombreTaller; }
-            set { nombreTaller = value; LblNombreTaller.Text = value; }
+            LblNombreTaller.Text = $"{nombre}";
+            this.nombreTaller = nombre;
         }
 
         [Category("Custom Props")]
-        public string PersonasAceptadas
+        public void PersonasAceptadas(int PersonasAceptadas)
         {
-            get { return personasAceptadas; }
-            set { personasAceptadas = value; LblPersonasAceptadas.Text = value; }
+            LblPersonasAceptadas.Text = $"Personas Aceptadas: {Convert.ToString(PersonasAceptadas)}";
         }
 
         [Category("Custom Props")]
-        public string PersonasPendientes
+        public void PersonasPendientes(int PersonasPendientes)
         {
-            get { return nombreTaller; }
-            set { nombreTaller = value; LblPersonasPendientes.Text = value; }
+            LblPersonasPendientes.Text = $"Personas Pendientes: {Convert.ToString(PersonasPendientes)}";
         }
 
         [Category("Custom Props")]
-        public string FechayHora
+        public void FechayHora(DateTime FechaYHora)
         {
-            get { return fechayHora; }
-            set { fechayHora = value; LblFechayHora.Text = value; }
+            LblFechayHora.Text = $"Fecha y Hora: {Convert.ToString(FechaYHora)}";
         }
 
         #endregion
 
+        private void ListTalleres_Load(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.opcion = "Abrir";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.opcion = "Eliminar";
+        }
     }
 }

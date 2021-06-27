@@ -15,11 +15,16 @@ namespace MicroParque
 {
     public partial class FrmTalleres : Form
     {
+        private string opcion;
+        private int cantidadTalleres;
+        private string nombreTallerSeleccionado = string.Empty;
+        private ListTalleres[] listTalleres;
         private TallerService tallerService;
         public FrmTalleres()
         {
             InitializeComponent();
             tallerService = new TallerService();
+            timer1.Start();
         }
 
         private void FrmTalleres_Load(object sender, EventArgs e)
@@ -31,18 +36,18 @@ namespace MicroParque
 
         private void CargarTalleresControl()
         {
-            int cantidadTalleres;
             List<Taller> talleres = new List<Taller>();
             talleres = tallerService.ConsultaGeneralDeTalleres().Talleres;
             cantidadTalleres = talleres.Count;
-            ListTalleres[] listTalleres = new ListTalleres[100];
+            listTalleres = new ListTalleres[100];
+            flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < cantidadTalleres; i++)
             {
                 listTalleres[i] = new ListTalleres();
-                listTalleres[i].nombreTaller = talleres[i].Nombre;
-                listTalleres[i].personasAceptadas = Convert.ToString(talleres[i].CantidadAsistentes);
-                listTalleres[i].personasPendientes = "get data";
-                listTalleres[i].fechayHora = Convert.ToString(talleres[i].Fecha);
+                listTalleres[i].NombreTaller(talleres[i].Nombre);
+                listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
+                listTalleres[i].PersonasPendientes(tallerService.FiltroPorEstadoYTaller("PENDIENTE",talleres[i].Nombre).Talleres.Count());
+                listTalleres[i].FechayHora(talleres[i].Fecha);
                 if (flowLayoutPanel1.Controls.Count < 0)
                 {
                     flowLayoutPanel1.Controls.Clear();
@@ -55,6 +60,42 @@ namespace MicroParque
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cantidadTalleres; i++)
+            {
+                if(listTalleres[i].opcion == "Abrir")
+                {
+                    nombreTallerSeleccionado = listTalleres[i].nombreTaller;
+                }
+                if (listTalleres[i].opcion == "Eliminar")
+                {
+                    opcion = "Eliminar";
+                    nombreTallerSeleccionado = listTalleres[i].nombreTaller;
+                }
+                listTalleres[i].opcion = string.Empty;
+            }
+            if(opcion == "Eliminar")
+            {
+                tallerService.EliminarTaller(nombreTallerSeleccionado);
+                CargarTalleresControl();
+            }
+            opcion = string.Empty;
+            label2.Text = nombreTallerSeleccionado;
+            timer1.Stop();
+            timer1.Interval = 1;
+            timer1.Start();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

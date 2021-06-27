@@ -13,7 +13,7 @@ namespace DAL
         public void GuardarInscripcionesTaller(InscripcionTaller inscripcionTaller)
         {
             TextWriter escribirArchivo;
-            FileStream file = new FileStream("InscripcionTaller", FileMode.Create);
+            FileStream file = new FileStream("InscripcionTaller", FileMode.Append);
             escribirArchivo = new StreamWriter(file);
             escribirArchivo.WriteLine(codificacion.CodificacionDeCadenas($"{inscripcionTaller.PrimerNombre};{inscripcionTaller.SegundoNombre};{inscripcionTaller.PrimerApellido};" +
                                       $"{inscripcionTaller.SegundoApellido};{inscripcionTaller.Telefono};{inscripcionTaller.NivelAcademico};" +
@@ -25,10 +25,10 @@ namespace DAL
         public void GuardarTaller(Taller taller)
         {
             TextWriter escribirArchivo;
-            FileStream file = new FileStream("Talleres", FileMode.Create);
+            FileStream file = new FileStream("Talleres", FileMode.Append);
             escribirArchivo = new StreamWriter(file);
-            escribirArchivo.WriteLine(codificacion.CodificacionDeCadenas($"{taller.Nombre};{taller.CantidadAsistentes};{taller.Fecha};" +
-                                      $"{taller.Disponibilidad}"));
+            escribirArchivo.WriteLine($"{taller.Nombre};{taller.CantidadAsistentes};{taller.Fecha};" +
+                                      $"{taller.Disponibilidad}");
             escribirArchivo.Close();
         }
 
@@ -149,7 +149,7 @@ namespace DAL
             file.Close();
             foreach (var item in talleres)
             {
-                if (nombreTaller != item.Nombre)
+                if (nombreTaller.Equals(item.Nombre) == false)
                 {
                     GuardarTaller(item);
                 }
@@ -157,7 +157,7 @@ namespace DAL
 
             foreach (var item in talleres)
             {
-                if (nombreTaller == item.Nombre)
+                if (nombreTaller.Equals(item.Nombre))
                 {
                     return true;
                 }

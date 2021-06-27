@@ -129,14 +129,9 @@ namespace BLL
         {
             try
             {
-                if (tallerRepository.EliminarTaller(nombreTaller))
-                {
-                    return "El taller se elimino exitosamente";
-                }
-                else
-                {
-                    return "No se pudo eliminar el taller";
-                }
+                tallerRepository.EliminarTaller(nombreTaller);
+                
+                return "El taller se elimino exitosamente";
             }
             catch (Exception e)
             {
