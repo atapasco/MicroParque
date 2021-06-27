@@ -48,7 +48,7 @@ namespace MicroParque
                 listTalleres[i] = new ListTalleres();
                 listTalleres[i].NombreTaller(talleres[i].Nombre);
                 listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
-                listTalleres[i].PersonasPendientes(inscripcionTalleres.Count);
+                listTalleres[i].PersonasPendientes(1);
                 listTalleres[i].FechayHora(talleres[i].Fecha);
                 if (flowLayoutPanel1.Controls.Count < 0)
                 {
