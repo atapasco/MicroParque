@@ -250,7 +250,7 @@ namespace BLL
             public InscripcionTalleresTryCach(List<InscripcionTaller> talleres)
             {
                 this.Taller = null;
-                this.Talleres = Talleres;
+                this.Talleres = talleres;
                 this.MensajeError = null;
             }
             public InscripcionTalleresTryCach(string MensajeError)
