@@ -15,10 +15,10 @@ namespace DAL
             TextWriter escribirArchivo;
             FileStream file = new FileStream("InscripcionTaller", FileMode.Append);
             escribirArchivo = new StreamWriter(file);
-            escribirArchivo.WriteLine(codificacion.CodificacionDeCadenas($"{inscripcionTaller.PrimerNombre};{inscripcionTaller.SegundoNombre};{inscripcionTaller.PrimerApellido};" +
+            escribirArchivo.WriteLine($"{inscripcionTaller.PrimerNombre};{inscripcionTaller.SegundoNombre};{inscripcionTaller.PrimerApellido};" +
                                       $"{inscripcionTaller.SegundoApellido};{inscripcionTaller.Telefono};{inscripcionTaller.NivelAcademico};" +
                                       $"{inscripcionTaller.FormacionSuperior};{inscripcionTaller.NombreTaller};{inscripcionTaller.Correo};" +
-                                      $"{inscripcionTaller.Estado}"));
+                                      $"{inscripcionTaller.Estado}");
             escribirArchivo.Close();
         }
 
@@ -242,17 +242,18 @@ namespace DAL
 
         public List<InscripcionTaller> FiltroPorEstadoYTaller(string estado, string tallerNombre)
         {
-            List<Taller> talleres = new List<Taller>();
-            talleres = ConsultaGeneralDeTalleres();
+            List<InscripcionTaller> inscripcionTalleresAux = new List<InscripcionTaller>();
             List<InscripcionTaller> inscripcionTalleres = new List<InscripcionTaller>();
             inscripcionTalleres = ConsultaGeneralInscripcionTalleres();
-            IEnumerable<InscripcionTaller> conteo = null;
-            foreach (var item in talleres)
+            foreach (var item in inscripcionTalleres)
             {
-                conteo = from inscripcionTaller in inscripcionTalleres where inscripcionTaller.Estado == estado && item.Nombre == inscripcionTaller.NombreTaller select inscripcionTaller;
+                if(item.Estado == estado && tallerNombre == item.NombreTaller)
+                {
+                    inscripcionTalleresAux.Add(item);
+                }
             }
 
-            return conteo.ToList();
+            return inscripcionTalleresAux;
         }
     }
 }

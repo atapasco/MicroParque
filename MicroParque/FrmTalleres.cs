@@ -31,12 +31,14 @@ namespace MicroParque
         private void CargarTalleresControl()
         {
             List<Taller> talleres = new List<Taller>();
+            List<InscripcionTaller> inscripcionTalleres = new List<InscripcionTaller>();
             talleres = tallerService.ConsultaGeneralDeTalleres().Talleres;
             cantidadTalleres = talleres.Count;
             listTalleres = new ListTalleres[100];
             flowLayoutPanel1.Controls.Clear();
             for (int i = 0; i < cantidadTalleres; i++)
             {
+                inscripcionTalleres = tallerService.FiltroPorEstadoYTaller("PENDIENTE",talleres[i].Nombre).Talleres;
                 listTalleres[i] = new ListTalleres();
                 listTalleres[i].NombreTaller(talleres[i].Nombre);
                 listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
