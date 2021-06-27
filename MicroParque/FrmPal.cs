@@ -21,7 +21,7 @@ namespace MicroParque
 
         private void panelMain_Load(object sender, EventArgs e)
         {
-            PanelChild.Size = new Size(1000, 505);
+            PanelChild.Size = new Size(1011, 373);
         }
 
         private void Frm_Main_Click(object sender, EventArgs e)

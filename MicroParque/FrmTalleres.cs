@@ -30,8 +30,8 @@ namespace MicroParque
         private void FrmTalleres_Load(object sender, EventArgs e)
         {
             CargarTalleresControl();
-            ClientSize = new Size(1000, 505);
-            flowLayoutPanel1.Size = new Size(650, 515);
+            ClientSize = new Size(1011, 373);
+            flowLayoutPanel1.Size = new Size(686, 373);
         }
 
         private void CargarTalleresControl()
@@ -46,7 +46,7 @@ namespace MicroParque
                 listTalleres[i] = new ListTalleres();
                 listTalleres[i].NombreTaller(talleres[i].Nombre);
                 listTalleres[i].PersonasAceptadas(talleres[i].CantidadAsistentes);
-                listTalleres[i].PersonasPendientes(tallerService.FiltroPorEstadoYTaller("PENDIENTE",talleres[i].Nombre).Talleres.Count());
+                listTalleres[i].PersonasPendientes(1);
                 listTalleres[i].FechayHora(talleres[i].Fecha);
                 if (flowLayoutPanel1.Controls.Count < 0)
                 {

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 using System;
+using System.Drawing;
 
 namespace MicroParque
 {
@@ -9,6 +10,7 @@ namespace MicroParque
         public ListTalleres()
         {
             InitializeComponent();
+            this.BackColor = Color.White;
 
         }
 

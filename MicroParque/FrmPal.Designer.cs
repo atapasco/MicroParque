@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnTalleres = new System.Windows.Forms.Button();
             this.PanelChild = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,22 +41,12 @@
             this.timer1.Interval = 1200000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MicroParque.Properties.Resources.barra_menu;
-            this.pictureBox1.Location = new System.Drawing.Point(183, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(658, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // BtnTalleres
             // 
             this.BtnTalleres.BackColor = System.Drawing.Color.Turquoise;
             this.BtnTalleres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnTalleres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTalleres.Location = new System.Drawing.Point(332, 50);
+            this.BtnTalleres.Location = new System.Drawing.Point(338, 50);
             this.BtnTalleres.Name = "BtnTalleres";
             this.BtnTalleres.Size = new System.Drawing.Size(104, 65);
             this.BtnTalleres.TabIndex = 5;
@@ -66,17 +56,27 @@
             // 
             // PanelChild
             // 
-            this.PanelChild.Location = new System.Drawing.Point(8, 170);
+            this.PanelChild.Location = new System.Drawing.Point(19, 170);
             this.PanelChild.Name = "PanelChild";
-            this.PanelChild.Size = new System.Drawing.Size(1066, 505);
+            this.PanelChild.Size = new System.Drawing.Size(1011, 373);
             this.PanelChild.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MicroParque.Properties.Resources.barra_menu;
+            this.pictureBox1.Location = new System.Drawing.Point(188, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(658, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Frm_Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(1103, 554);
+            this.ClientSize = new System.Drawing.Size(1036, 555);
             this.Controls.Add(this.PanelChild);
             this.Controls.Add(this.BtnTalleres);
             this.Controls.Add(this.pictureBox1);
