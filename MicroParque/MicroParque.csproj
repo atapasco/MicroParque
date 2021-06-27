@@ -132,6 +132,12 @@
     <Compile Include="ListTalleres.Designer.cs">
       <DependentUpon>ListTalleres.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListRestaurante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListRestaurante.Designer.cs">
+      <DependentUpon>ListRestaurante.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CtrlAgregar.resx">
       <DependentUpon>CtrlAgregar.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +165,12 @@
     <EmbeddedResource Include="FrmPal.resx">
       <DependentUpon>FrmPal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestarauntes.resx">
+      <DependentUpon>FrmRestarauntes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestaurante.resx">
+      <DependentUpon>FrmRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTalleres.resx">
       <DependentUpon>FrmTalleres.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="ListTalleres.resx">
       <DependentUpon>ListTalleres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListRestaurante.resx">
+      <DependentUpon>ListRestaurante.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -230,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\1654193.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\sticker-png-restaurant-logo-food-meal-lunch-symbol-dinner-finger-food-chef.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\icono-restaurante-01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

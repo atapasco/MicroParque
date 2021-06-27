@@ -113,6 +113,16 @@ namespace MicroParque.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icono_restaurante_01 {
+            get {
+                object obj = ResourceManager.GetObject("icono-restaurante-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap LOGIN {
             get {
                 object obj = ResourceManager.GetObject("LOGIN", resourceCulture);
@@ -181,20 +191,21 @@ namespace MicroParque.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a .
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static string nombreArchivo {
+        internal static System.Drawing.Bitmap pagina_pal {
             get {
-                return ResourceManager.GetString("nombreArchivo", resourceCulture);
+                object obj = ResourceManager.GetObject("pagina pal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pagina_pal {
+        internal static System.Drawing.Bitmap sticker_png_restaurant_logo_food_meal_lunch_symbol_dinner_finger_food_chef {
             get {
-                object obj = ResourceManager.GetObject("pagina pal", resourceCulture);
+                object obj = ResourceManager.GetObject("sticker-png-restaurant-logo-food-meal-lunch-symbol-dinner-finger-food-chef", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
