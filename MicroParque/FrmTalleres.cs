@@ -112,7 +112,7 @@ namespace MicroParque
             if (nombreTallerSeleccionado != string.Empty)
             {
                 MostrarModicar();
-            }            
+            }
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -120,6 +120,29 @@ namespace MicroParque
             tallerService.ModificarFechaTaller(nombreTallerSeleccionado, dateTimePicker1.Value);
             CargarTalleresControl();
             OcultarModicar();
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            openFormChild(new FrmAgregarTaller());
+
+        }
+
+
+        public void openFormChild(object formChild)
+        {
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                flowLayoutPanel1.Controls.RemoveAt(0);
+            }
+
+            Form child = formChild as Form;
+            child.TopLevel = false;
+            child.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Controls.Add(child);
+            flowLayoutPanel1.Tag = child;
+
+            child.Show();
         }
     }
 }

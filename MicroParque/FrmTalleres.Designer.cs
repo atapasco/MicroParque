@@ -131,6 +131,7 @@ namespace MicroParque
             this.BtnAgregar.TabIndex = 8;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // dateTimePicker1
             // 
