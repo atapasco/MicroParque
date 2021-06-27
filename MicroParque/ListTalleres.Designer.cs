@@ -49,6 +49,8 @@ namespace MicroParque
             this.LblNombreTaller.Size = new System.Drawing.Size(298, 20);
             this.LblNombreTaller.TabIndex = 1;
             this.LblNombreTaller.Text = "NombreTaller";
+            this.LblNombreTaller.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.LblNombreTaller.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // LblPersonasAceptadas
             // 
@@ -58,6 +60,8 @@ namespace MicroParque
             this.LblPersonasAceptadas.Size = new System.Drawing.Size(296, 23);
             this.LblPersonasAceptadas.TabIndex = 2;
             this.LblPersonasAceptadas.Text = "Personas Aceptadas:\r\n";
+            this.LblPersonasAceptadas.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.LblPersonasAceptadas.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // LblPersonasPendientes
             // 
@@ -67,6 +71,8 @@ namespace MicroParque
             this.LblPersonasPendientes.Size = new System.Drawing.Size(298, 27);
             this.LblPersonasPendientes.TabIndex = 3;
             this.LblPersonasPendientes.Text = "Personas Pendientes:\r\n";
+            this.LblPersonasPendientes.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.LblPersonasPendientes.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // LblFechayHora
             // 
@@ -76,6 +82,8 @@ namespace MicroParque
             this.LblFechayHora.Size = new System.Drawing.Size(298, 21);
             this.LblFechayHora.TabIndex = 4;
             this.LblFechayHora.Text = "Fecha y Hora: ";
+            this.LblFechayHora.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.LblFechayHora.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // panel1
             // 
@@ -86,6 +94,8 @@ namespace MicroParque
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(155, 150);
             this.panel1.TabIndex = 5;
+            this.panel1.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.panel1.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // button1
             // 
@@ -119,6 +129,8 @@ namespace MicroParque
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             // 
             // ListTalleres
             // 
@@ -133,6 +145,8 @@ namespace MicroParque
             this.Name = "ListTalleres";
             this.Size = new System.Drawing.Size(660, 150);
             this.Load += new System.EventHandler(this.ListTalleres_Load);
+            this.MouseEnter += new System.EventHandler(this.ListTalleres_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ListTalleres_MouseLeave);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -67,5 +67,20 @@ namespace MicroParque
         {
             this.opcion = "Eliminar";
         }
+
+        private void ListTalleres_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+        }
+
+        private void ListTalleres_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseEnter(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Silver;
+        }
     }
 }
