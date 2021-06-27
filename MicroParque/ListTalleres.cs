@@ -58,19 +58,9 @@ namespace MicroParque
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.opcion = "Abrir";
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.opcion = "Eliminar";
-        }
-
         private void ListTalleres_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = Color.White;
+            //this.BackColor = Color.White;
         }
 
         private void ListTalleres_MouseHover(object sender, EventArgs e)
@@ -80,7 +70,21 @@ namespace MicroParque
 
         private void ListTalleres_MouseEnter(object sender, EventArgs e)
         {
-            this.BackColor = Color.Silver;
+            //this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (this.BackColor == Color.Silver)
+            {
+                this.BackColor = Color.White;
+            }
+            else this.BackColor = Color.Silver;
+        }
+
+        private void ListTalleres_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.opcion = "Abrir";
         }
     }
 }
