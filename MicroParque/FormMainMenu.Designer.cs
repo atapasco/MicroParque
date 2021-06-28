@@ -43,7 +43,7 @@ namespace MicroParque
             // PanelChild
             // 
             this.PanelChild.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PanelChild.Location = new System.Drawing.Point(1, -3);
+            this.PanelChild.Location = new System.Drawing.Point(-8, 276);
             this.PanelChild.Name = "PanelChild";
             this.PanelChild.Size = new System.Drawing.Size(1036, 555);
             this.PanelChild.TabIndex = 7;

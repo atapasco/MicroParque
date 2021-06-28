@@ -250,13 +250,15 @@ namespace DAL
             inscripcionTalleres = ConsultaGeneralInscripcionTalleres();
             foreach (var item in inscripcionTalleres)
             {
-                if(item.Estado == estado && tallerNombre == item.NombreTaller)
+                if (item.Estado == estado && tallerNombre == item.NombreTaller)
                 {
                     inscripcionTalleresAux.Add(item);
                 }
             }
 
             return inscripcionTalleresAux;
+        
+
         }
     }
 }

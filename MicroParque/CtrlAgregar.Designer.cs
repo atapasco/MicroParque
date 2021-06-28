@@ -29,26 +29,26 @@ namespace MicroParque
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txthora = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnombreTaller = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // textBox2
+            // txthora
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(59, 260);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 21);
-            this.textBox2.TabIndex = 21;
+            this.txthora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txthora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txthora.Location = new System.Drawing.Point(59, 260);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(136, 21);
+            this.txthora.TabIndex = 21;
             // 
             // button2
             // 
@@ -60,6 +60,7 @@ namespace MicroParque
             this.button2.TabIndex = 20;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -71,6 +72,7 @@ namespace MicroParque
             this.button1.TabIndex = 19;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -94,16 +96,16 @@ namespace MicroParque
             this.label2.TabIndex = 17;
             this.label2.Text = "Fecha";
             // 
-            // dateTimePicker1
+            // dtpfecha
             // 
-            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.SeaGreen;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(59, 179);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(323, 21);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtpfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpfecha.CalendarTitleBackColor = System.Drawing.Color.SeaGreen;
+            this.dtpfecha.CalendarTrailingForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.dtpfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpfecha.Location = new System.Drawing.Point(59, 179);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(323, 21);
+            this.dtpfecha.TabIndex = 16;
             // 
             // label1
             // 
@@ -116,14 +118,14 @@ namespace MicroParque
             this.label1.TabIndex = 15;
             this.label1.Text = "Nombre Taller";
             // 
-            // textBox1
+            // txtnombreTaller
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(59, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(323, 21);
-            this.textBox1.TabIndex = 14;
+            this.txtnombreTaller.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnombreTaller.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnombreTaller.Location = new System.Drawing.Point(59, 99);
+            this.txtnombreTaller.Name = "txtnombreTaller";
+            this.txtnombreTaller.Size = new System.Drawing.Size(323, 21);
+            this.txtnombreTaller.TabIndex = 14;
             // 
             // panel2
             // 
@@ -146,14 +148,14 @@ namespace MicroParque
             // CtrlAgregar
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txthora);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnombreTaller);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,14 +169,14 @@ namespace MicroParque
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txthora;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnombreTaller;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
     }
